@@ -1,0 +1,10 @@
+module TimeMethods 
+
+  def random_from_ranges(ranges)
+    if (range = ranges.random)
+      Time.zone.at((range.end_date.to_f - range.start_date.to_f)*rand + range.start_date.to_f)
+    end
+  end
+  
+end  
+  
